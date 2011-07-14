@@ -1,0 +1,11 @@
+# Drive-in Device Test Theatre
+# Park your devices and enjoy the show!
+# Copyright 2011, Scott Jehl
+# MIT license
+RewriteEngine On
+RewriteRule (.*\.html) drive-in/park.php?url=$1
+<FilesMatch "drive-in/.*" >
+ExpiresActive On
+ExpiresDefault "access"
+</FilesMatch>
+# //End Drive-in Mobile Remoting
