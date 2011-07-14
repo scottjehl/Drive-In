@@ -16,3 +16,7 @@ _A Device Testing Theatre_
 - You'll need an Apache web server with PHP.
 - You have to open files by their .html filename (even index.html).
 - For the love of God, don't deploy a live site with this script enabled. :)
+
+### Props:
+
+This was inspired by a much cooler Node.js implementation by Chris Marstall, Creative Technologist at the Boston Globe. 
