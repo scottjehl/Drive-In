@@ -24,4 +24,4 @@ MIT
 
 ### Props:
 
-This was inspired by a much cooler Node.js implementation by Chris Marstall, Creative Technologist at the Boston Globe. 
+This was inspired by a much cooler Node.js implementation (http://github.com/marstall/shim) by Chris Marstall, Creative Technologist at the Boston Globe. 
