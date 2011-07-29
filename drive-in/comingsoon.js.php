@@ -5,7 +5,7 @@ function checkChange($currurl){
 
 	if( $currurl !== $currcontents ){
 		//return JS to change locations
-		echo "$.mobile.changePage('$currcontents'); checkupdates();";
+		echo "$.mobile.changePage('/jquery-mobile/$currcontents'); checkupdates();";
 	}
 	else{
 		//1 second timeout
