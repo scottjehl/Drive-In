@@ -1,6 +1,6 @@
 <?
 //limit the file writing to urls opened via regular HTTP requests
-$allowAjax = false;
+$allowAjax = true;
 
 //get url
 $url = $_GET[ "url" ];
@@ -15,7 +15,7 @@ if( $allowAjax || !$_SERVER[ "HTTP_X_REQUESTED_WITH" ] || $_SERVER[ "HTTP_X_REQU
 	//append script tag at end of HTML which 
 	echo preg_replace(
 			'/<\/html>/i',
-			'<script>(function(s,src){ s.src = src; setTimeout(function(){ document.documentElement.appendChild(s); },1000); })(document.createElement("script"), "drive-in/comingsoon.js.php?" + Math.random().toString().slice(2,11) )</script></html>',
+			'<script>function checkupdates(s,src){ s = document.createElement("script"); s.src = "/jquery-mobile/drive-in/comingsoon.js.php?tmp=" + Math.random().toString().slice(2,11); setTimeout(function(){ document.documentElement.appendChild(s); },100); }; checkupdates();</script></html>',
 			file_get_contents( "../" . $url )
 		);
 }
